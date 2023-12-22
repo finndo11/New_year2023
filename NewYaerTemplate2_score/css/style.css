@@ -1,0 +1,275 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: 'Caveat',cursive;
+  font-weight: 400;
+  background-color: #999999;
+}
+/* Основные классы */
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+/* Переменные с цветами */
+:root {
+  --accent-color: #F7654A;
+  --dark-color: #404149;
+  --white-color: #FFFFFF;
+  --background-color: #E5E5E5;
+}
+/* Классы для текста */
+.text-h2 {
+  font-family: 'Caveat',cursive;
+  font-weight: 500;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.text-h3 {
+  font-family: 'Caveat',cursive;
+  font-weight: 500;
+  font-size: 24px;
+}
+.text-h4 {
+  font-family: 'Caveat',cursive;
+  font-weight: 500;
+  font-size: 21px;
+  letter-spacing: 0.02em;
+  /* letter-spacing: ; */
+}
+.text-p {
+  font-family: 'Caveat',cursive;
+  font-size: 16px;
+}
+.text-p-reviews {
+  font-family: 'Caveat',cursive;
+  font-size: 14px;
+  line-height: 21px;
+}
+/* Первый экран */
+.header {
+  min-height: 740px;
+  background-image: url(../img/Frame\ 1.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header__title {
+  /* background-color: rgba(0,0,0,0.2); */
+  padding-top: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 112px;
+}
+@media screen and (max-width: 1280px) {
+  .header__title {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+/* Текст на первом экране */
+.h1 {
+  margin: 0 auto 17px;
+  max-width: 734px;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 95px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+@media screen and (max-width: 380px) {
+  .h1 {
+    font-size: 46px;
+    line-height: 64px;
+  }
+}
+.h4 {
+  margin: 0 auto;
+  font-weight: 400;
+  max-width: 734px;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+/* О нас: секция */
+.about {
+  padding-top: 40px;
+  min-height: 1080px;
+  position: relative;
+}
+.about__h4 {
+  color: var(--accent-color);
+  font-size: 72px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.about__h5 {
+  color: #000;
+  font-size: 36px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.about__p {
+  color: var(--gray-color);
+  font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+}
+
+/* Наши проекты */
+.project-h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.about__flex {
+  display: flex;
+}
+.about__flex-item {
+  max-width: 350px;
+  margin-right: 30px;
+}
+.about__flex-item:last-child {
+  margin-right: 0;
+}
+.project-img {
+  margin-bottom: 45px;
+}
+.rectangle {
+  width: 55px;
+  height: 6px;
+  background-color: var(--accent-color);
+  margin-bottom: 15px;
+}
+.project-h3 {
+  color: var(--dark-color);
+  margin-bottom: 13px;
+}
+.project-p {
+  color: var(--gray-color);
+}
+@media screen and (max-width: 1280px) {
+  .about {
+    padding: 40px 15px 110px 15px;
+  }
+} 
+@media screen and (max-width: 768px) {
+  .about {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  .about__flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about__flex-item {
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+  .about__flex-item:last-child {
+    margin-bottom: 0;
+  }
+} 
+
+/* Футер */
+.footer {
+  padding: 30px 0;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+.footer__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1280px) {
+  .footer {
+    padding: 30px 15px;
+  }
+} 
+@media screen and (max-width: 768px) {
+  .footer__flex {
+    flex-direction: column;
+  }
+}
+
+/* Счётчик */
+/* Загружаем GOOGLE-шрифт caveat
+ https://fonts.google.com/?selection.=
+ */
+
+/*  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Comic Sans MS", cursive;
+ } */
+  .score{
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     margin: auto;
+     /* height: 100vh; */
+     /* background: #5cb8d7; */
+ }  
+ .wrapper{
+     position: relative;
+     display: block;
+     /* background: #ecedef; */
+     padding: 60px 30px;
+ 
+ }
+ .wrapper h1{
+     font-size: 56px;
+     color: #ffffff;
+     font-family: 'Caveat', cursive;
+ }
+ .wrapper .countdown_timer {
+     display: flex;
+     justify-content: space-between;
+     padding: 30px;
+ }
+ .countdown_timer .timer{
+     padding: 20px;
+     margin: 20px;
+     background: #d80056;
+     box-shadow: 2px 2px 120px #d5c5c6, 2px 2px 120px #d5c5c6;
+     border: 3px solid #ffffff;
+     border-radius: 8px;
+     min-width: 100px;
+ }
+ .timer p {
+     color: #ffffff;
+     text-transform: uppercase;
+     font-size: 18px;
+ 
+ }
